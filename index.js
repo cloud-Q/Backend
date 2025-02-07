@@ -19,7 +19,7 @@ app.use(express.json());
 
 
 mongoose.connect('mongodb+srv://wwwcloud346:yFitvCMRXKaiXzuG@cluster0.rvqkg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
-    .then(() => console.log('mongodb connected'))
+    .then(() => console.log('mongodb connected')).catch((err) => console.error('MongoDB connection error:', err));
 
 
 
@@ -31,5 +31,5 @@ mongoose.connect('mongodb+srv://wwwcloud346:yFitvCMRXKaiXzuG@cluster0.rvqkg.mong
 
 
 app.listen(9000, () => {
-    console.log('Server is running on http://localhost:9000');
+    console.log('Server is running on port 9000');
 });
