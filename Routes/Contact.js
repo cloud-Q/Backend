@@ -26,12 +26,12 @@ router.post("/contact", async (req, res) => {
             to: email,
             subject: "Your Inquiry has been received",
             html: `<p>Hello ${email},</p><p>We have registered your request.</p>`,
-            attachments: [
-                {
-                filename: 'Receipt.pdf',
-                path:'one.pdf' 
-                }
-                ],
+            // attachments: [
+            //     {
+            //     filename: 'Receipt.pdf',
+            //     path:'one.pdf' 
+            //     }
+            //     ],
         };
 
         await transporter.sendMail(contactMail);
