@@ -29,7 +29,9 @@ mongoose.connect('mongodb+srv://wwwcloud346:yFitvCMRXKaiXzuG@cluster0.rvqkg.mong
     app.use('/', loginRouter); 
 
 
+// this does not work for vercel , instead we have to use expoet statement
+// app.listen(9000, () => {
+//     console.log('Server is running on port 9000');
+// });
 
-app.listen(9000, () => {
-    console.log('Server is running on port 9000');
-});
+export default app;
