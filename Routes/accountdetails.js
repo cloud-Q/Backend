@@ -17,6 +17,8 @@ router.get('/account-details', async (req, res) => {
                 return res.json({ merror: 'Invalid token' });
             }
     
+            console.log("Decoded Token:", decoded); // Debugging
+            
             const user = await User.findOne({ email: decoded.email });
             if (!user) {
                 return res.json({ error: 'User not found' });
