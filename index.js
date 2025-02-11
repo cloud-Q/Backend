@@ -2,7 +2,8 @@ import express from 'express';
 import contactRoutes from './Routes/Contact.js';
 import registerRoutes from './Routes/Register.js';
 import emailRouter from './Routes/Emailtoall.js';
-import loginRouter from './Routes/Login.js'
+import loginRouter from './Routes/Login.js';
+import accountdetailsRouter from './Routes/accountdetails.js'
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
@@ -27,6 +28,7 @@ mongoose.connect('mongodb+srv://wwwcloud346:yFitvCMRXKaiXzuG@cluster0.rvqkg.mong
     app.use('/', registerRoutes);
     app.use('/', emailRouter);
     app.use('/', loginRouter); 
+    app.use('/', accountdetailsRouter);
 
 
 // this does not work for vercel , instead we have to use expoet statement

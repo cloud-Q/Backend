@@ -38,3 +38,5 @@ router.get('/account-details', async (req, res) => {
 })
 
 
+
+export default router;
